@@ -1,5 +1,15 @@
 # Validation
 
+## Desktop GUI update
+
+PASS locally on Windows / Python 3.13.7: 17 tests normally and under optimized Python, with all Tk widget tests executed; Bandit scans the CLI, GUI and .pyw entry point with zero findings and zero skips. A visible-window check confirmed the sample 192.168.1.73/24 calculation.
+
+ECC self-review covers new GUI/launcher/test files, unchanged shared parser and the task diff. Validation uses the existing bounded parser, clears stale results and notes, and keeps imports free of window creation. No remaining actionable findings. CI now requires a working display and runs GUI tests under Xvfb on Ubuntu, alongside Windows; check the update PR for remote outcomes. Required check names, action pins, permissions and protections are preserved.
+
+The GUI's reviewed OmniRoute draft used 551 input and 1,109 output tokens (1,660 total), after fresh zero-price/privacy checks. Codex removed duplicate integer validation, added resize weights and stale-result handling, and corrected contextual prefix notes. Draft/receipt files remain local. No further worker request was needed to prepare publication.
+
+## Earlier CLI release
+
 Verified locally on Windows with Python 3.13.7 and through the published GitHub Actions workflows. The initial published source revision `dd309cd662e51285c358e2892dfe5428f09b9fda` passes the remote matrix and security checks; subsequent revisions have their own check results in GitHub Actions.
 
 | Check | Command or method | Result |
