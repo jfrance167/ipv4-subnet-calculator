@@ -1,0 +1,2 @@
+# Optional development scanner; the calculator itself has no third-party dependencies.
+bandit==1.9.4
