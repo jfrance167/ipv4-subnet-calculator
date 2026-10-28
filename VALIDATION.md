@@ -1,6 +1,6 @@
 # Validation
 
-Verified locally on Windows with Python 3.13.7. Publication is authorized; fresh remote results are tracked in GitHub Actions.
+Verified locally on Windows with Python 3.13.7 and through the published GitHub Actions workflows. The initial published source revision `dd309cd662e51285c358e2892dfe5428f09b9fda` passes the remote matrix and security checks; subsequent revisions have their own check results in GitHub Actions.
 
 | Check | Command or method | Result |
 | --- | --- | --- |
@@ -12,8 +12,8 @@ Verified locally on Windows with Python 3.13.7. Publication is authorized; fresh
 | Large subnet | CLI `/0` test with a five-second subprocess limit | PASS: 4,294,967,294 usable addresses without enumeration |
 | Workflow YAML | Safe-load both workflow files and verify triggers, minimum permissions, action pins and checkout settings | PASS after quoting the pip command containing a YAML colon |
 | ECC self-review | Source, callers, tests and actual staged diff | PASS: the workflow quoting issue was corrected; no remaining actionable findings |
-| Remote CI / CodeQL | Published workflows | Verification pending on the first published source revision |
-| Python 3.10 and Ubuntu | Prepared CI matrix | NOT RUN locally |
+| Remote CI / CodeQL | Published workflows | PASS: tests, Bandit and CodeQL on the initial published source revision |
+| Windows/Ubuntu, Python 3.10/3.13 | GitHub-hosted matrix | PASS: all four combinations; Python 3.10/Ubuntu were not run locally |
 
 The calculator has no third-party runtime dependencies. Bandit is an optional development tool pinned in `requirements-security.txt`; development-tool transitive dependencies are not hash-locked. No suppression was added to the calculator scanner.
 
