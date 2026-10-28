@@ -5,3 +5,5 @@
 - A network can contain billions of addresses. Endpoint arithmetic avoids building a host list.
 - A CIDR calculator describes address ranges; it cannot prove deployment suitability or network security.
 - Worker drafts need independent input-contract and boundary checks before execution.
+- A GUI should share the existing parser so validation stays consistent; duplicate numeric conversion can introduce errors for unusually long inputs.
+- A passing headless test run can hide skipped widget tests. CI explicitly requires the display and tests real Tk widgets.
